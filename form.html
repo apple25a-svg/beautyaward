@@ -3783,14 +3783,7 @@
     }
 
     /* accent bar */
-    .section::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--rose) 0%, var(--gold) 100%);
-      border-radius: 2px 2px 0 0;
-    }
+    .section::before { display: none; }
 
     .section-header {
       margin-bottom: 28px;
