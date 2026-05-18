@@ -5791,15 +5791,10 @@
         <div class="bloom-info" id="bloom-info">
           <div class="bloom-info-letter" id="bi-letter">U · UNFILTERED</div>
           <div class="bloom-info-title" id="bi-tc">健康保養</div>
-          <div class="bloom-info-en en italic" id="bi-en">Feel-good Wellness</div>
           <div class="bloom-info-desc" id="bi-desc">
             美麗正從由外而內，轉向由內而外。膠原蛋白飲、玻尿酸飲品與機能食品，逐漸成為日常保養的一部分，口服與外用的界線也正在消失。
           </div>
-          <div class="bloom-info-tag">
-            <span class="bar"></span>
-            <span>對應類別</span>
-            <strong id="bi-cat">口服保養</strong>
-          </div>
+
         </div>
       </div>
 
@@ -5810,11 +5805,11 @@
         </div>
         <div class="bloom-pill" data-petal="1">
           <div class="pill-letter">N</div>
-          <div class="pill-tc">ESG 永續</div>
+          <div class="pill-tc">永續信念</div>
         </div>
         <div class="bloom-pill" data-petal="2">
           <div class="pill-letter">F</div>
-          <div class="pill-tc">修護潤澤</div>
+          <div class="pill-tc">防禦修護</div>
         </div>
         <div class="bloom-pill" data-petal="3">
           <div class="pill-letter">U</div>
@@ -5889,33 +5884,35 @@
   </section>
 
 <!-- STICKY MINI CTA -->
+  <footer style="text-align:center; padding: 24px 16px; font-family:'Inter',sans-serif; font-size:12px; color:rgba(42,32,28,0.45); letter-spacing:0.04em; background: #FAF5F1;">
+    © 2026 TVBS 聯利媒體股份有限公司 All Rights Reserved.
+  </footer>
+
   <a href="form.html" class="sticky-cta" id="stickyCta">
     前往報名 <span class="arrow">→</span>
   </a>
 
   <script>
     const PETALS = [
-      { letter: 'U · UNFILTERED', en: 'Feel-good Wellness', tc: '健康保養', cat: '口服保養',
+      { letter: 'U · UNFILTERED', en: '', tc: '健康保養', cat: '口服保養',
         desc: '美麗正從由外而內，轉向由內而外。膠原蛋白飲、玻尿酸飲品與機能食品，逐漸成為日常保養的一部分，口服與外用的界線也正在消失。' },
-      { letter: 'N · NATURE', en: 'Lifestyle Shift · Climate', tc: 'ESG 永續', cat: 'ESG 永續',
+      { letter: 'N · NOBLE', en: '', tc: '永續信念', cat: '永續信念',
         desc: '永續不再只是公關語言，而是一種被選擇的生活方式。可補充包裝與透明機制，逐漸成為品牌核心，也讓正確消費轉化為一種身份表達。' },
-      { letter: 'F · FUSION', en: 'Medical-home Loop', tc: '修護潤澤', cat: '修護潤澤',
+      { letter: 'F · FORTIFY', en: '', tc: '防禦修護', cat: '防禦修護',
         desc: '診間療程與居家保養之間，正形成穩定循環。術後護理成為日常延伸，療癒感與儀式感，也逐漸成為選品時的重要標準。' },
-      { letter: 'U · UPLIFT', en: 'One Bite Luxury', tc: '頂級珍稀', cat: '頂級珍稀',
+      { letter: 'U · UNIQUE', en: '', tc: '頂級珍稀', cat: '頂級珍稀',
         desc: '從科研成分到稀有植物與海洋原料，珍稀與有感並存，讓「有感的奢華」成為願意投入的價值，也定義了新的奢華態度。' },
-      { letter: 'R · RITUAL', en: 'Unwind to Win', tc: '療癒儀式', cat: '療癒儀式',
+      { letter: 'R · RITUAL', en: '', tc: '療癒儀式', cat: '療癒儀式',
         desc: '睡眠、放鬆與夜間修復，成為新的美容核心。保養不只是步驟，而是一段留給自己的時間，香氣與質地共同堆疊出日常儀式感。' },
-      { letter: 'L · LIFE', en: 'Next-gen Beauty Concierge', tc: '醫美共生', cat: '醫美共生',
+      { letter: 'L · LONGEVITY', en: '', tc: '醫美共生', cat: '醫美共生',
         desc: '醫美逐漸日常化，與護膚保養並行存在。療程選擇與診所判斷，也成為新的美麗決策方式，映照出更真實的當代美感。' },
     ];
 
     function setPetal(i) {
       const p = PETALS[i];
       document.getElementById('bi-letter').textContent = p.letter;
-      document.getElementById('bi-en').textContent = p.en;
       document.getElementById('bi-tc').textContent = p.tc;
       document.getElementById('bi-desc').textContent = p.desc;
-      document.getElementById('bi-cat').textContent = p.cat;
       document.querySelectorAll('.bloom-pill').forEach(el => el.classList.toggle('active', +el.dataset.petal === i));
       document.querySelectorAll('.petal-path').forEach(el => el.classList.toggle('active', +el.dataset.petal === i));
       document.querySelectorAll('.letter-label').forEach(el => el.classList.toggle('active', +el.dataset.petal === i));
